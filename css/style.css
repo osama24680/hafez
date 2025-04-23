@@ -627,6 +627,9 @@ li.menu-item-has-children.active {
     transform: scale(2.47) translateY(0);
     top: 100%;
 }
+
+
+
 /* 06. hero-section */
 .hero-section {
     padding-top: 320px;
@@ -638,6 +641,9 @@ li.menu-item-has-children.active {
 }
 .hero-text,.hero-img {
     position: relative;
+}
+.hero-text{
+    width: 70%;
 }
 .hero-section:before {
     position: absolute;
@@ -676,6 +682,9 @@ li.menu-item-has-children.active {
     display: flex;
     justify-content: end;
 }
+
+
+
 .slider-home-1 .owl-item img.hero-img-style {
     transform: scale(1);
     transition: transform 10000ms ease, -webkit-transform 10000ms ease;
@@ -711,6 +720,7 @@ li.menu-item-has-children.active {
     position: absolute;
     top: 0;
     height: 100vh;
+    width: 100% ;
 }
 /* 07. Search Popup */
  .search-popup{
@@ -1033,21 +1043,47 @@ span.flaticon-multiply i {
 .islamic-history {
     width: 100%;
 }
-ul.list li {
-    padding-bottom: 14px;
-    position: relative;
-    padding-left:20px;
-    font-size: 18px;
+.feature-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 30px 0;
 }
-ul.list li:before {
+
+.feature-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 0px;
+    font-size: 18px;
+    color: #333;
+}
+
+.feature-list li::before {
     content: "";
     position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: var(--common-colour);
+    left: 0;
+    top: 10px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--theme-colour);
     border-radius: 50%;
-    top: 7px;
-    left:0;
+}
+
+.feature-list li strong {
+    display: block;
+    font-size: 19px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.feature-list li p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+}
+.historyBtn{
+    text-align: center;
 }
 .islamic-history  a.btn {
     background-color: transparent;
@@ -1110,48 +1146,49 @@ ul.list li:before {
     border-top-right-radius: 250px;
 }
 /* 12. community */
-.community-text svg {
-    width: 65px;
-    height: auto;
+.community {
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 30px;
 }
+
+.community:hover {
+    transform: translateY(-8px);
+}
+
+.community figure {
+    margin: 0;
+    height: 250px;
+    overflow: hidden;
+}
+
+.community figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+}
+
 .community-text {
-    display: flex;
-    z-index: 111;
-    position: relative;
+    padding: 25px;
 }
-.community-text i {
-    background-color: var(--common-colour);
-    width: 110px;
-    height: 110px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    margin-right: 4px;
-    transform: translatey(-60px);
-}
-.community-text i svg {
-    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
-}
-.community:hover .community-text i svg {
-    -webkit-animation: top-bottom 1s ease-in-out;
-    animation: top-bottom 1s ease-in-out;
-}
+
 .community-text a {
-    font-size: 30px;
-    font-family: var(--common-font);
-    padding-top: 20px;
-    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--heading-colour, #333);
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
 }
-.community img {
-    border-radius: 146px;
-    border-bottom-left-radius: 0;
-}
+
 .community-text p {
-    width: 87%;
-}
-.community-text a:hover {
-    color: var(--common-colour);
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
 }
 /* 13. courses */
 .courses {
@@ -1243,7 +1280,7 @@ ul.list li:before {
 .courses-weeks {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 20px 26px;
     background-color: var(--theme-colour);
     margin-top: 23px;
@@ -1252,9 +1289,10 @@ ul.list li:before {
     color: var(--common-colour);
 }
 .courses-weeks h6 {
-    font-size: 14px;
+    font-size: 17px;
     font-weight: bold;
     text-transform: uppercase;
+    color:#fff
 }
 .courses .border {
     border: 1px solid #000000 !important;
