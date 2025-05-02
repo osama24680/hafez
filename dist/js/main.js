@@ -50,3 +50,10 @@ async function getPrayerTimes12() {
 getPrayerTimes12();
 
 //******************************************************************************************************************
+// Free_Trial_Class_text
+  var typed = new Typed("#Free_Trial_Class_text", {
+    strings: ["Free Trial Class"],
+    typeSpeed: 60,
+    backSpeed: 40,
+    loop: true
+  });
