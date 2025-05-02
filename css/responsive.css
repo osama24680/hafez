@@ -737,6 +737,12 @@
   .content {
     margin-bottom: 40px;
   }
+    .masjid-text h3 {
+    font-size: 38px;
+    margin-bottom: 15px;
+    width: 70%;
+    line-height: 60px;
+  }
   ul.image-gallery li figure {
     margin-bottom: 14px;
     width: 200px;
@@ -981,6 +987,14 @@
   .error {
     width: 100%;
   }
+  .travel-package {
+    background-color: #fcf3d1;
+    padding: 20px;
+    border-top-right-radius: 170px;
+    border: 3px solid #fcf3d1;
+    width:100%;
+    margin-bottom: 40px;
+}
   .slider-ayat.two .ayat {
     padding: 0;
     padding-bottom: 20px;
@@ -1064,7 +1078,9 @@
   }
   .masjid-text h3 {
     font-size: 38px;
+    margin-bottom: 15px;
   }
+
   .masjid-text h3,.masjid-text p,.masjid-text {
     width: 100%;
   }
@@ -1477,7 +1493,7 @@
     padding: 30px;
   }
   .masjid-text h3 {
-    line-height: 31px;
+    line-height: 60px;
     font-size: 30px;
   }
 	.footer-top {
