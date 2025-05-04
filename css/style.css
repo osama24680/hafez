@@ -102,7 +102,14 @@
     --theme-colour: #fbc50b;
     --common-colour: #007d3a;
     --common-font: 'Sawarabi Mincho';
+    --main-color: #016b5c;
+    --accent-color: #f4b400;
+    --bg-light: #f9f9f9;
+    --text-color: #333;
+
+
 }
+
 
 body,
 html {
@@ -161,6 +168,11 @@ li {
 
 figure {
     overflow: hidden;
+}
+
+.wide_container {
+    width: 93%;
+    margin: auto;
 }
 
 .gap {
@@ -3083,18 +3095,17 @@ li.timing-date {
 .courses_pricing {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    gap: 3%;
 
 }
 
 .travel-package {
     background-color: #fcf3d1;
-    padding: 20px;
+    padding: 8px;
     border-top-right-radius: 170px;
     border: 3px solid #fcf3d1;
-    width: 47%;
+    width: 22%;
     margin-bottom: 40px;
 }
 
@@ -3120,7 +3131,7 @@ li.timing-date {
 }
 
 .travel-package h5 {
-    font-size: 49px;
+    font-size: 27px;
     font-weight: 900;
     color: var(--common-colour);
     padding-top: 10px;
@@ -3148,6 +3159,7 @@ li.timing-date {
 .travel-package-list {
     background-color: #fff;
     padding: 30px;
+    border-top-right-radius: 100px;
 }
 
 .travel-package.two .btn {
@@ -3180,6 +3192,142 @@ li.timing-date {
     align-items: center;
     border-radius: 50%;
     margin-right: -21px;
+}
+
+.plan-switcher {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.tab-btn {
+    background: none;
+    border: 2px solid var(--main-color);
+    padding: 12px 25px;
+    border-radius: 30px;
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--main-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.plans {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.plan {
+    width: 15%;
+    background-color: white;
+    border-radius: 16px;
+    border: 2px solid var(--main-color);
+    padding: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.plan:hover {
+    transform: scale(1.05);
+    background-color: #fcf3d1;
+}
+
+.plan h3 {
+    color: var(--main-color);
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-align: center;
+
+}
+
+.plan .price {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: var(--accent-color);
+    text-align: center;
+}
+
+.plan .features {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.plan .features li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.plan.highlight {
+    border: 2px solid var(--accent-color);
+    background-color: var(--special);
+    box-shadow: 0 0 15px rgba(255, 180, 0, 0.3);
+    position: relative;
+    transform: scale(1.1);
+}
+
+.plan.highlight::before {
+    content: "★ Popular";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: var(--accent);
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 12px;
+}
+
+.plan .btn-join {
+    text-align: center;
+    width: 70%;
+    margin: auto;
+}
+
+.plan .btn-join button {
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 20px;
+    border: 2px solid var(--common-colour);
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 20px;
+    width: 100%;
+    background-color: var(--common-colour);
+    transition: all 0.6s ease;
+}
+
+.plan .btn-join button a {
+
+    color: #fff;
+
+}
+
+.plan .btn-join button:hover {
+    background-color: transparent;
+    color: var(--common-colour);
+    ;
+    padding: 10px 20px;
+    border: 2px solid var(--common-colour);
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 20px;
+    width: 100%;
+
+}
+
+.plan .btn-join button:hover a {
+    color: var(--common-colour);
 }
 
 /* 46. program */
@@ -4154,9 +4302,9 @@ li.prev {
     font-size: 25px;
 }
 
-.form-section .inputItem ::placeholder {
+/* .form-section .inputItem ::placeholder {
     color: var(--common-colour);
-}
+} */
 
 .form-section .inputItem input,
 .form-section .inputItem select,
@@ -4167,11 +4315,20 @@ li.prev {
     border-radius: 6px;
     width: 100%;
     box-sizing: border-box;
+
 }
-.form-section .inputItem textarea{
-min-height: 100px;
+
+#priceInput::placeholder,
+#priceInput {
+    color: red !important;
+    font-weight: bold;
+}
+
+.form-section .inputItem textarea {
+    min-height: 100px;
     resize: vertical;
 }
+
 .trial-form {
     display: flex;
     flex-direction: column;
@@ -4182,11 +4339,13 @@ min-height: 100px;
     display: flex;
     gap: 10px;
 }
-.form-section  .inputItemBtn{
+
+.form-section .inputItemBtn {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .submit-button {
     background-color: transparent;
     color: #fff;
@@ -4199,9 +4358,16 @@ min-height: 100px;
     width: 100%;
     transition: .3s;
 }
+
 .submit-button:hover {
-background-color: var(--theme-colour);
-    
+    background-color: var(--theme-colour);
+
+}
+
+.error-message {
+    color: rgb(176, 10, 10);
+    font-size: 22px;
+    margin-top: 5px;
 }
 
 /* ......................................................................................................................... */

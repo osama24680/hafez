@@ -226,14 +226,11 @@
         </div>
     </section>
 
-
-
     <section class="steps-container container" style="background-image: url(img/color-bg.jpg)">
         <h2>3 Simple Steps To Start</h2>
         <div class="two_steps">
             <ul class="steps-list">
                 <li>
-
                     Fill in the Trial Form below.
                 </li>
                 <li>Book your Free Trial Class.</li>
@@ -245,31 +242,117 @@
         </div>
     </section>
 
+
+
+
+
     <section class="form-section container" style="background-image: url(img/color-bg.jpg)">
         <h2>Book Your <span class="highlight " id="Free_Trial_Class_text"></span> with Hafez Al-Quran</h2>
-        <form class="trial-form">
+        <form class="trial-form" id="courseForm">
             <div class="input-row inputItem">
-                <input type="text" placeholder="First Name *" required>
-                <input type="text" placeholder="Last Name *" required>
+                <input id="firstname" type="text" placeholder="First Name *" name="firstname" required>
+                <div class="error-message" id="firstname-error"></div>
             </div>
-            <div class="inputItem"><input type="text" placeholder="Phone Number *" required></div>
-            <div class="inputItem"><input type="email" placeholder="Email *" required></div>
-            <div class="inputItem"><select required>
+            <div class="input-row inputItem">
+                <input id="lastname" type="text" placeholder="Last Name *" name="lastname" required>
+                <div class="error-message" id="lastname-error"></div>
+            </div>
+            <div class="inputItem">
+                <input id="phone" type="text" placeholder="Phone Number *" name="phone" required>
+                <div class="error-message" id="phone-error"></div>
+            </div>
+            <div class="inputItem">
+                <input id="email" type="email" placeholder="Email *" name="email" required>
+                <div class="error-message" id="email-error"></div>
+            </div>
+
+            <div class="inputItem">
+                <select id="courseSelect" name="course" required>
+                    <option disabled selected>Select Course</option>
                     <option>1. Online Tajweed Rules Course</option>
                     <option>2. Qur'an Memorization Course</option>
                     <option>3. Arabic Language Course</option>
                     <option>4. Islamic Studies Course</option>
-                </select></div>
-            <div class="inputItem"><select required>
-                    <option>1. Egypt</option>
-                    <option>2. England</option>
-                    <option>3. USA</option>
-                    <!-- Add more countries as needed -->
-                </select></div>
-            <div class="inputItem"><textarea placeholder="Message"></textarea></div>
-            <div class="inputItem inputItemBtn"><button type="submit" class="submit-button">Register Now</button></div>
+                </select>
+                <div class="error-message" id="courseSelect-error"></div>
+            </div>
 
+            <div class="inputItem">
+                <select id="durationSelect" name="duration" required>
+                    <option disabled selected>Select Class Duration</option>
+                    <option value="30">30 Minutes</option>
+                    <option value="45">45 Minutes</option>
+                    <option value="60">60 Minutes</option>
+                </select>
+                <div class="error-message" id="durationSelect-error"></div>
+            </div>
 
+            <div class="inputItem">
+                <select id="packageSelect" name="package" required>
+                    <option disabled selected>Select Package</option>
+                </select>
+                <div class="error-message" id="packageSelect-error"></div>
+            </div>
+            <div class="inputItem">
+                <input type="text" id="priceInput" placeholder="Select course, duration, and package to see price"
+                    readonly style="font-weight: bold;">
+                <div class="error-message" id="priceInput-error"></div>
+            </div>
+
+            <div class="inputItem">
+                <select id="countrySelect" name="country" required>
+                    <option disabled selected>Select Country</option>
+
+                    <!-- Arab Countries -->
+                    <option value="Algeria">1. Algeria</option>
+                    <option value="Bahrain">2. Bahrain</option>
+                    <option value="Comoros">3. Comoros</option>
+                    <option value="Djibouti">4. Djibouti</option>
+                    <option value="Egypt">5. Egypt</option>
+                    <option value="Iraq">6. Iraq</option>
+                    <option value="Jordan">7. Jordan</option>
+                    <option value="Kuwait">8. Kuwait</option>
+                    <option value="Lebanon">9. Lebanon</option>
+                    <option value="Libya">10. Libya</option>
+                    <option value="Mauritania">11. Mauritania</option>
+                    <option value="Morocco">12. Morocco</option>
+                    <option value="Oman">13. Oman</option>
+                    <option value="Palestine">14. Palestine</option>
+                    <option value="Qatar">15. Qatar</option>
+                    <option value="Saudi Arabia">16. Saudi Arabia</option>
+                    <option value="Somalia">17. Somalia</option>
+                    <option value="Sudan">18. Sudan</option>
+                    <option value="Syria">19. Syria</option>
+                    <option value="Tunisia">20. Tunisia</option>
+                    <option value="United Arab Emirates">21. United Arab Emirates</option>
+                    <option value="Yemen">22. Yemen</option>
+
+                    <!-- Popular Foreign Countries -->
+                    <option value="United States">23. United States</option>
+                    <option value="United Kingdom">24. United Kingdom</option>
+                    <option value="Canada">25. Canada</option>
+                    <option value="Germany">26. Germany</option>
+                    <option value="France">27. France</option>
+                    <option value="Italy">28. Italy</option>
+                    <option value="Spain">29. Spain</option>
+                    <option value="Turkey">30. Turkey</option>
+                    <option value="India">31. India</option>
+                    <option value="Pakistan">32. Pakistan</option>
+                    <option value="Malaysia">33. Malaysia</option>
+                    <option value="Indonesia">34. Indonesia</option>
+                    <option value="Australia">35. Australia</option>
+                </select>
+                <div class="error-message" id="countrySelect-error"></div>
+            </div>
+
+            <div class="inputItem">
+                <textarea id="message" placeholder="Message" name="message"></textarea>
+                <div class="error-message" id="message-error"></div>
+            </div>
+
+            <div class="inputItem inputItemBtn">
+                <button type="submit" class="submit-button">Register Now</button>
+            </div>
         </form>
     </section>
 
@@ -471,7 +554,7 @@
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="js/custom.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/registration.js"></script>
 </body>
 
 </html>
