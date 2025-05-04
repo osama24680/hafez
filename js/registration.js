@@ -121,7 +121,7 @@ form.addEventListener("submit", function (event) {
                 Notes: ${messageText.value.trim()}
             `
 
-        const phoneNumber = "201127796848";
+        const phoneNumber = "201016015170";
         const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
         window.open(url, "_blank");
 

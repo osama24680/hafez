@@ -2963,7 +2963,7 @@ li.timing-date {
 }
 
 .scholars .opening-time img {
-    border-top-left-radius: 0;
+    /* border-top-left-radius: 0; */
     padding-top: 10px;
 }
 
@@ -4774,7 +4774,7 @@ li.single-comment.children {
     border-radius: 460px;
     overflow: hidden;
     width: fit-content;
-    border-top-left-radius: 0;
+    border-top-left-radius: 460px;
     margin: 0;
 }
 
@@ -4844,6 +4844,24 @@ li.single-comment.children {
     padding-top: 30px;
     padding-bottom: 70px;
 }
+
+.Scholars_Items {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.scholars {
+    width: 32%;
+}
+
+/* .Scholars_Items .scholars .opening-time figure {
+    width: 400px;
+}
+.Scholars_Items .scholars .opening-time figure img{
+    
+} */
 
 /* 71. content */
 .content p {
