@@ -1,4 +1,5 @@
-
+//******************************************************************************************************************
+//* Price *
 const planData = {
     30: [
         { name: 'Package A', price: 20 },
@@ -63,16 +64,10 @@ packageSelect.addEventListener('change', updatePrice);
 courseSelect.addEventListener('change', updatePrice);
 
 
-
-
 //******************************************************************************************************************
 //* Validation *
 
-// API Key => AIzaSyBiYGwPNFkr6oix1Cwq9yMarFqV1uExnMs
-// Sheet ID=> 19LWENkeGZH1m2b_uww0w-vAvH01LmR1rm4swrnbuwpo
-// Client ID => 664939937625-uu97l1cmpgh0jvbrv95tnuirld6ji4b8
 const form = document.getElementById("courseForm");
-
 form.addEventListener("submit", function (event) {
     event.preventDefault();
     document.querySelectorAll(".error-message").forEach(el => el.textContent = "");
@@ -162,6 +157,7 @@ attachLiveValidation("email", val => /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(val.trim(
 
 //******************************************************************************************************************
 //* Free_Trial_Class_text *
+
 var typed = new Typed("#Free_Trial_Class_text", {
     strings: ["Free Trial Class"],
     typeSpeed: 60,
