@@ -68,6 +68,9 @@ courseSelect.addEventListener('change', updatePrice);
 //******************************************************************************************************************
 //* Validation *
 
+// API Key => AIzaSyBiYGwPNFkr6oix1Cwq9yMarFqV1uExnMs
+// Sheet ID=> 19LWENkeGZH1m2b_uww0w-vAvH01LmR1rm4swrnbuwpo
+// Client ID => 664939937625-uu97l1cmpgh0jvbrv95tnuirld6ji4b8
 const form = document.getElementById("courseForm");
 
 form.addEventListener("submit", function (event) {
@@ -104,40 +107,35 @@ form.addEventListener("submit", function (event) {
     const country = document.getElementById("countrySelect");
     if (!country.value || country.selectedIndex === 0) showError("countrySelect", "Please select a country");
 
-    if (valid) {
-        const data = {
-            firstname: firstname.value.trim(),
-            lastname: lastname.value.trim(),
-            phone: phone.value.trim(),
-            email: email.value.trim(),
-            course: course.value,
-            duration: duration.value,
-            package: pkg.value,
-            price: document.getElementById("priceInput").value,
-            country: country.value,
-            message: document.querySelector("textarea").value.trim()
-        };
+    const price = document.getElementById("priceInput");
+    const messageText = document.getElementById("messageText");
 
-        fetch("https://script.google.com/macros/s/AKfycbwfwGLBBBx1bw2TX8zskj1SiQbSeyEJlN2e6nPgvGV89kFLIVaaVprQcZeX7SVZriNH/exec", {
-               
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
-        })
-            .then(res => res.json())
-            .then(response => {
-                alert("Form submitted successfully!");
-                form.reset();
-            })
-            .catch(err => {
-                console.error("Error submitting form", err);
-                alert("Error submitting form. Try again.");
-            });
+    if (valid) {
+        const message =
+
+            `
+                New Registration Request:
+                Name: ${firstname.value.trim()} ${lastname.value.trim()}
+                Phone: ${phone.value.trim()}
+                Email: ${email.value.trim()}
+                Course: ${course.value}
+                Duration: ${duration.value}
+                Package: ${pkg.value}
+                Price: ${price.value}
+                Country: ${country.value}
+                Notes: ${messageText.value.trim()}
+            `
+
+        const phoneNumber = "201127796848";
+        const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(url, "_blank");
+
+        form.reset();
     }
 
 });
+
+
 
 // Live validation
 function attachLiveValidation(id, validatorFn) {
