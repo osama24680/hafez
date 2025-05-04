@@ -118,7 +118,8 @@ form.addEventListener("submit", function (event) {
             message: document.querySelector("textarea").value.trim()
         };
 
-        fetch("https://script.google.com/macros/s/AKfycbwLAZC9xmT1Du1HgWE008TUH_Q6SWMDWm0z2bxilMnSz-9LlIruuOct_em7r6lAlC19/exec", {
+        fetch("https://script.google.com/macros/s/AKfycbwfwGLBBBx1bw2TX8zskj1SiQbSeyEJlN2e6nPgvGV89kFLIVaaVprQcZeX7SVZriNH/exec", {
+               
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
