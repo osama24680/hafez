@@ -159,7 +159,7 @@ attachLiveValidation("email", val => /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(val.trim(
 //* Free_Trial_Class_text *
 
 var typed = new Typed("#Free_Trial_Class_text", {
-    strings: ["Free Trial Class"],
+    strings: ["Course"],
     typeSpeed: 60,
     backSpeed: 40,
     loop: true
