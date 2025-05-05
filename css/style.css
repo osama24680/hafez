@@ -4856,12 +4856,13 @@ li.single-comment.children {
     width: 32%;
 }
 
-/* .Scholars_Items .scholars .opening-time figure {
-    width: 400px;
+.scholars-details {
+    width: 100%;
 }
-.Scholars_Items .scholars .opening-time figure img{
-    
-} */
+
+.imgDetails img {
+    width: 100%;
+}
 
 /* 71. content */
 .content p {
