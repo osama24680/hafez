@@ -10,18 +10,18 @@ const planData = {
     45: [
         { name: 'Package A', price: 30, classes: '4 Classes/month', features: ['1 class/week (45 min)', 'Monthly Billing'] },
         { name: 'Package B', price: 50, classes: '8 Classes/month', features: ['2 classes/week (45 min)', 'Save 7%'] },
-        { name: 'Package C', price: 70, classes: '12 Classes/month', features: ['3 classes/week (45 min)', 'Extra Practice'] },
-        { name: 'Package D', price: 95, classes: '16 Classes/month', features: ['4 classes/week', 'Longer Sessions'] },
-        { name: 'Package E', price: 115, classes: '20 Classes/month', features: ['5 classes/week', 'Best Value'], highlight: true },
-        { name: 'Package F', price: 135, classes: '24 Classes/month', features: ['6 classes/week', 'Full Immersion'] },
+        { name: 'Package C', price: 75, classes: '12 Classes/month', features: ['3 classes/week (45 min)', 'Extra Practice'] },
+        { name: 'Package D', price: 100, classes: '16 Classes/month', features: ['4 classes/week', 'Longer Sessions'] },
+        { name: 'Package E', price: 120, classes: '20 Classes/month', features: ['5 classes/week', 'Best Value'], highlight: true },
+        { name: 'Package F', price: 150, classes: '24 Classes/month', features: ['6 classes/week', 'Full Immersion'] },
     ],
     60: [
-        { name: 'Package A', price: 40, classes: '4 Classes/month', features: ['1 class/week (1 hr)', 'Monthly Billing'] },
-        { name: 'Package B', price: 65, classes: '8 Classes/month', features: ['2 classes/week', 'Save 7%'] },
-        { name: 'Package C', price: 90, classes: '12 Classes/month', features: ['3 classes/week', 'Q&A Time'] },
-        { name: 'Package D', price: 120, classes: '16 Classes/month', features: ['4 classes/week', 'In-depth Sessions'] },
-        { name: 'Package E', price: 145, classes: '20 Classes/month', features: ['5 classes/week', 'Top Choice'], highlight: true },
-        { name: 'Package F', price: 170, classes: '24 Classes/month', features: ['6 classes/week', 'Best for Families'] },
+        { name: 'Package A', price: 35, classes: '4 Classes/month', features: ['1 class/week (1 hr)', 'Monthly Billing'] },
+        { name: 'Package B', price: 70, classes: '8 Classes/month', features: ['2 classes/week', 'Save 7%'] },
+        { name: 'Package C', price: 100, classes: '12 Classes/month', features: ['3 classes/week', 'Q&A Time'] },
+        { name: 'Package D', price: 135, classes: '16 Classes/month', features: ['4 classes/week', 'In-depth Sessions'] },
+        { name: 'Package E', price: 165, classes: '20 Classes/month', features: ['5 classes/week', 'Top Choice'], highlight: true },
+        { name: 'Package F', price: 200, classes: '24 Classes/month', features: ['6 classes/week', 'Best for Families'] },
     ]
 };
 
